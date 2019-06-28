@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="keywords" content="音乐,QQ音乐,在线听歌,音乐下载,音乐播放器,音乐网站,MV,巅峰榜,音乐排行榜,翻译歌曲,热门歌曲,经典老歌,无损音乐,无损曲库"/>
+    <meta name="description" content="QQ音乐是腾讯公司推出的一款网络音乐服务产品，海量音乐在线试听、新歌热歌在线首发、歌词翻译、手机铃声下载、高品质无损音乐试听、海量无损曲库、正版音乐下载、空间背景音乐设置、MV观看等，是互联网音乐播放和下载的优选。" />
+
+    <title>QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！</title>
+    <!-- favicon图标 -->
+    <link rel="shortcut icon" href="../images/logo.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/toplist.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 头部导航栏 -->
+    <div class="mod_header">
+      <nav class="navbar navbar-default navbar-max" role="navigation">
+        <!--大导航栏-->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            <img src="../images/font-logo.png" alt="" class="img-responsive" />
+          </a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">音乐馆</a></li>
+            <li><a href="mymusic.html">我的音乐</a></li>
+            <li><a href="#">客户端</a></li>
+            <li><a href="#">音乐号</a></li>
+            <li><a href="#">VIP</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+             <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索音乐、MV、歌单、用户" aria-label="请输入搜索内容">
+                <button class="search_input__btn">
+                  <i class="icon_search glyphicon glyphicon-search"></i>
+                  <span class="icon_txt">搜索</span>
+                </button>
+             </div>
+          </form>   
+          <div class="navbar-form" style="float: left;">
+            <button type="submit" class="btn btn-login">登录</button>
+          </div>
+          <div class="navbar-form navbar-nav">
+            <button type="submit" class="btn btn-default">开通绿钻豪华版</button>
+            <button type="submit" class="btn btn-default">开通付费包</button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </nav>
+      
+      <ul class="nav-revise"><!--小导航栏-->
+        <li><a href="index.html">首页</a></li>
+        <li><a href="singer_list.html">歌手</a></li>
+        <li><a href="album_lib.html">专辑</a></li>
+        <li class="active"><a href="toplist.html">排行榜</a></li>
+        <li><a href="playlist.html">分类歌单</a></li>
+        <li><a href="#">电台</a></li>
+        <li><a href="#">MV</a></li>
+        <li><a href="album_mall">数字专辑</a></li>
+        <li><a href="piao_wu">票务</a></li>
+      </ul> 
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="main">
+      <div class="toplist_nav">
+        <dl class="toplist_nav__list">
+          <dt class="toplist_nav__tit">QQ音乐巅峰榜</dt>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link toplist_nav__link--current">巅峰榜·流行指数</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·热歌</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·新歌</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">说唱榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·网络歌曲</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·内地</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·港台</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·欧美</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·韩国</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·影视金曲</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·日本</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·腾讯音乐人原创榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·K歌金曲</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">巅峰榜·MV</a></dd>
+
+        </dl>
+
+        <dl class="toplist_nav__list">
+          <dt class="toplist_nav__tit">全球榜</dt>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">美国公告牌榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">美国iTunes榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">韩国Mnet榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">英国UK榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">日本公信榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">香港电台榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">香港商台榜</a></dd>
+
+          <dd class="toplist_nav__item"><a href="" class="toplist_nav__link">台湾Hito中文榜</a></dd>
+
+        </dl>
+      </div>
+
+  
+      <div class="mod_toplist">
+        <div class="toplist__hd">
+          <h1 class="toplist__tit">巅峰榜·流行指数</h1>
+          <span class="toplist_switch">
+            <a href="javascript:;" class=""><i class="glyphicon glyphicon-menu-left"></i></a>
+            <span>2019-03-19</span>
+            <a href="javascript:;" class=""><i class="glyphicon glyphicon-menu-right"></i></a>
+          </span>
+          <a href="javascript:;" class="toplist__rule js_desc" data-left="-650" data-top="-78" >榜单规则</a>
+        </div>
+        <div class="mod_songlist_toolbar">
+          <a href="" class="mod_btn_green mod_btn_green_a"><i class="glyphicon glyphicon-play-circle"></i>播放全部</a>
+          <a href="javascript:;" class="mod_btn"><i class="glyphicon glyphicon-plus"></i>添加到</a>
+          <a href="javascript:;" class="mod_btn"><i class="glyphicon glyphicon-save"></i>下载</a>
+          <a href="javascript:;" class="mod_btn"><i class="glyphicon glyphicon-indent-right"></i>批量操作</a>
+          <a href="" class="mod_btn" ><i class="glyphicon glyphicon-edit"></i>评论(271948)</a>
+        </div>
+
+        <!-- 歌曲列表 -->
+        <table class="mod_table">
+          <thead>
+            <tr>
+              <th class="mod_table_th_1"></th>
+              <th class="mod_table_th_1"></th>
+              <th class="mod_table_th_13">歌曲</th>
+              <th class="mod_table_th_5">歌手</th>
+              <th class="mod_table_th_2">时长</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tab_num_1">1</td>
+              <td class="tab_num_2">
+                <i class="glyphicon glyphicon-arrow-up"></i>33%
+              </td>
+              <td>
+                <div class="mod_singer">
+                  <div class="img">
+                    <a href=""><img src="../images/singer/singer1.jpg" alt="" /></a>
+                  </div>
+                  <div class="mod_singer_name">
+                    <a href="" title="有一种悲伤 《比悲伤更悲伤的故事》电影主题曲">有一种悲伤 <span>《比悲伤更悲伤的故事》电影主题曲</span></a>
+                  </div>
+                </div>
+              </td>
+              <td class="tab_type">
+                <a href="" title="A-Lin")">A-Lin</a>
+              </td>
+              <td class="tab_time">02:12</td>
+            </tr>
+            <tr>
+              <td class="tab_num_1">2</td>
+              <td class="tab_num_2">
+                <i class="glyphicon glyphicon-arrow-up"></i>38%
+              </td>
+              <td>
+                <div class="mod_singer">
+                  <div class="img">
+                    <a href=""><img src="../images/list/list2.jpg" alt="" /></a>
+                  </div>
+                  <div class="mod_singer_name">
+                    <a href="" title="Wonder 《神奇乐园历险记》电影插曲">Wonder<span>《神奇乐园历险记》电影插曲</span></a>
+                  </div>
+                </div>
+              </td>
+              <td class="tab_type">
+                <a href="" title="Wonder (From "Wonder Park")">Wonder (From "Wonder Park")</a>
+              </td>
+              <td class="tab_time">02:12</td>
+            </tr>
+          </tbody>
+      </table>
+
+        <!-- 评论 -->
+        <div class="mod_comment" id="comment_box">
+          <div class="part__hd">
+            <h2 class="part__tit">评论<span class="c_tx_thin part__tit_desc js_all_comment_num">共0条评论</span></h2>
+          </div>
+          <div class="mod_comment js_cmt_input">
+            <div class="comment__input">
+              <div class="comment__textarea js_comment__textarea  c_bg_normal">
+                <div class="comment__textarea_inner">
+                  <!--c_tx_normal-->
+                  <!--focus评论框的时候将.comment__textarea_default模块隐藏，同时显示.comment__textarea_input-->
+                  <div class="comment__textarea_default c_tx_thin js_reply_text_blur" contenteditable="true">期待你的神评论……</div>
+                  <div class="js_reply_text comment__textarea_input c_tx_normal" contenteditable="true" style="display:none;"></div>
+                </div>
+                <!--字数超过后添加comment__tips--warn_tx 去掉c_tx_thin-->
+                <div class="comment__tips js_comment_tips c_tx_thin" data-max="300">剩余<span class="c_tx_highlight">300</span>字
+                </div>
+              </div>
+              <a href="javascript:;" class="mod_btn_green comment__tool_btn js_send_reply">发表评论</a>
+            </div>
+          </div>
+          <div class="mod_all_comment js_mod_all">
+            <div class="comment_type__title c_b_normal">
+              <h2>最新评论(1)</h2>
+            </div>
+            <ul class="comment__list">
+              <li class="comment__list_item c_b_normal">
+                <a href="javascript:;" class="comment__avatar">
+                  <img src="../images/list/list1.jpg" class="" title="最宝贝你"> 
+                </a>
+                <div class="comment__title">
+                  <a href="javascript:;" class="c_tx_thin " >最宝贝你</a>  
+                </div>
+                <p class="c_tx_normal comment__text">今晚全场消费由赵公子买单 尖叫声～</p>
+                <div class="comment__opt">
+                  <span class="comment__date c_tx_thin">14:00</span>
+                  <div class="pull-right">
+                    <a class="comment__report" href="javascript:;">举报</a>
+                    <a class="comment__zan" href="javascript:;">
+                      <i class="glyphicon glyphicon-thumbs-up"></i>
+                      <span class="js_praise_num">0</span>
+                    </a>
+                    <a class="" href="javascript:;" data-nick="最宝贝你">
+                      <i class="glyphicon glyphicon-edit"></i>
+                    </a> 
+                  </div>
+                  <div class="cleaarfix"></div>                     
+                </div>
+              </li>
+            </ul>
+
+            <div class="mod_page_nav">
+              <strong class="current">1</strong>
+              <a href="javascript:;">2</a>
+              <a href="javascript:;">3</a>
+              <a href="javascript:;">4</a>
+              <strong class="more">...</strong>
+              <a href="javascript:;">10878</a>
+              <a href="javascript:;" class="next" title="下一页" hidefocus=""><span>&gt;</span>
+              </a>
+            </div>
+
+          </div>
+          <p class="comment__rule">
+            <a class="" href="javascript:;">QQ音乐评论指北</a>
+          </p>
+        </div>
+      </div>
+                    
+      <!-- 专辑简介 -->
+      <div class="popup_data_detail" data-aria="popup" style="display:none;z-index:10000000000;">
+        <div class="popup_data_detail__cont">
+          <h3 class="popup_data_detail__tit">榜单规则</h3>
+          <p>追踪全球音乐流行趋势，乐坛最热门歌曲，网络蹿红歌曲根据地。展示QQ音乐用户的关注热度，体现歌曲飙升程度的潮流音乐排行榜。<br><br>更新时间：每天更新<br>歌曲数量：100首<br>统计算法：QQ音乐库内全部歌曲，根据综合数据7天前的涨幅进行排序，取前100名<br>综合数据：登录用户在QQ音乐播放/分享/下载数据
+          </p>
+        </div>
+        <i class="popup_data_detail__arrow"></i>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer" role="footer">
+      <div class="section_inner">
+        <div class="footer_info">
+
+          <div class="footer_download">
+            <h3 class="footer_tit">下载QQ音乐客户端</h3>
+            <ul class="footer_download_list">
+              <li class="footer_download_list__item"><a href="//y.qq.com/download/" class="js_footer_down" data-type="pc" data-stat="y_new.footer.download.pc"><i class="glyphicon glyphicon-th-large icon_qm_pc"></i>PC版</a></li>
+              <li class="footer_download_list__item"><a href="//y.qq.com/download/" class="js_footer_down" data-type="mac" data-stat="y_new.footer.download.mac"><i class="icon_qm_pc glyphicon glyphicon-blackboard"></i>Mac版</a></li>
+              <li class="footer_download_list__item"><a href="//y.qq.com/download/" class="js_footer_down" data-type="andriod" data-stat="y_new.footer.download.andriod"><i class="icon_qm_pc glyphicon glyphicon-erase"></i>Android版</a></li>
+              <li class="footer_download_list__item"><a href="//y.qq.com/download/" class="js_footer_down" data-type="iphone" data-stat="y_new.footer.download.iphone"><i class="icon_qm_pc glyphicon glyphicon-apple"></i>iPhone版</a></li>
+            </ul>
+          </div>
+
+          <div class="footer_product">
+            <h3 class="footer_tit">特色产品</h3>
+            <ul class="footer_product_list">
+              <li class="footer_product_list__item footer_product_list__item--pic"><a href="http://kg.qq.com/?pgv_ref=qqmusic.y.topmenu" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.k"><i class="icon_qm_pc glyphicon glyphicon-piggy-bank"></i>全民K歌</a></li>
+              <li class="footer_product_list__item footer_product_list__item--pic"><a href="http://y.qq.com/vip/voice_intro/index.html" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.supersound"><i class="icon_qm_pc glyphicon glyphicon-baby-formula"></i>Super Sound</a></li>
+              <li class="footer_product_list__item footer_product_list__item--pic"><a href="http://y.qq.com/y/static/down/qplay.html?pgv_ref=qqmusic.y.topmenu" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.qplay"><i class="icon_qm_pc glyphicon glyphicon-tree-deciduous"></i>QPlay</a></li>
+              <li class="footer_product_list__item" style="margin: 20px 25px;"><a href="http://y.qq.com/y/static/down/car_introduce.html" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.car_play">车载互联</a></li>
+              <li class="footer_product_list__item" style="margin: 20px 25px;"><a href="http://y.qq.com/yanchu/?pgv_ref=qqmusic.y.topmenu" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.yanchu">QQ演出</a></li>
+            </ul>
+          </div>
+
+          <div class="footer_group"><h3 class="footer_tit">TME集团官网</h3><ul class="footer_group_list"><li class="footer_platform_list__item"><a href="https://www.tencentmusic.com/" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.thetme">腾讯音乐</a></li></ul>
+          </div>
+          <div class="footer_link">
+            <h3 class="footer_tit">合作链接</h3>
+              <!-- 显示全部 footer_link_list--show -->
+            <ul class="footer_link_list">
+              <li class="footer_link_list__item"><a href="//y.qq.com/portal/company_detail.html?id=297" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">CJ ENM</a></li>
+              <li class="footer_link_list__item"><a href="http://v.qq.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">腾讯视频</a></li>
+              <li class="footer_link_list__item"><a href="http://z.qzone.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">手机QQ空间</a></li>
+              <li class="footer_link_list__item"><a href="http://im.qq.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">最新版QQ</a></li>
+              <li class="footer_link_list__item"><a href="http://e.qq.com/index.shtml" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">腾讯社交广告</a></li>
+              <li class="footer_link_list__item"><a href="http://guanjia.qq.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">电脑管家</a></li>
+              <li class="footer_link_list__item"><a href="http://browser.qq.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">QQ浏览器</a></li>
+              <li class="footer_link_list__item"><a href="http://www.weiyun.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">腾讯微云</a></li>
+              <li class="footer_link_list__item"><a href="https://cloud.tencent.com/?fromSource=gwzcw.756433.756433.756433" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">腾讯云</a></li>
+              <li class="footer_link_list__item"><a href="http://fm.qq.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">企鹅FM</a></li>
+              <li class="footer_link_list__item"><a href="http://www.znds.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">智能电视网</a></li>
+              <li class="footer_link_list__item"><a href="http://www.dangbei.com/" rel="noopener" target="_blank" class="js_other_link" data-stat="y_new.footer.other_link">当贝市场</a></li>
+            </ul>
+          </div>
+          <div class="footer_platform">
+            <h3 class="footer_tit">开放平台</h3>
+            <ul class="footer_platform_list">
+              <li class="footer_platform_list__item"><a href="http://y.tencentmusic.com/" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.tme">腾讯音乐人平台</a></li>
+              <li class="footer_platform_list__item"><a href="//y.qq.com/vip/daren_recruit/apply.html" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.daren_recruit">音乐号认证</a></li>
+              <li class="footer_platform_list__item"><a href="http://y.qq.com/cp/homepage.html#/home" target="_blank" class="js_other_link" data-stat="y_new.footer.other_music.cp">机构入驻</a></li>     
+            </ul>
+          </div>
+        </div>
+        <div class="footer_copyright">
+        
+          <p>
+            <a href="http://www.tencent.com/" rel="noopener nofollow" target="_blank" title="关于腾讯">关于腾讯</a> | 
+            <a href="http://www.tencent.com/index_e.shtml" rel="noopener nofollow" target="_blank" title="About Tencent">About Tencent</a> | 
+            <a href="http://www.qq.com/contract.shtml" rel="noopener nofollow" target="_blank" title="服务条款">服务条款</a> | 
+            <a href="http://y.qq.com/y/static/tips/service_tips.html" rel="noopener nofollow" target="_blank" title="用户服务协议">用户服务协议</a> | 
+            <a href="https://y.qq.com/m/client/intro/privacy.html" rel="noopener nofollow" target="_blank" title="隐私政策">隐私政策</a> | 
+            <a href="https://y.qq.com/vip/right_declare/index.html" rel="noopener nofollow" target="_blank" title="权利声明">权利声明</a> | 
+            <a href="http://www.tencentmind.com/" rel="noopener nofollow" "="" target="_blank" title="广告服务">广告服务</a> | 
+            <a href="http://hr.tencent.com/" rel="noopener nofollow" target="_blank" title="腾讯招聘">腾讯招聘</a> | 
+            <a href="http://service.qq.com/" rel="noopener nofollow" target="_blank" title="客服中心">客服中心</a> | 
+            <a href="http://www.qq.com/map/" rel="noopener nofollow" target="_blank" title="网站导航">网站导航</a>
+          </p>
+
+          <p>Copyright © 1998 - <script type="text/javascript">document.write(new Date().getFullYear());</script>2019 Tencent. <a target="_blank" href="http://www.tencent.com/en-us/le/copyrightstatement.shtml" rel="noopener nofollow" title="All Rights Reserved.">All Rights Reserved.</a></p>
+          <p>腾讯公司 <a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" rel="noopener nofollow" title="版权所有">版权所有</a> <a target="_blank" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" rel="noopener nofollow" title="腾讯网络文化经营许可证">腾讯网络文化经营许可证</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。-->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

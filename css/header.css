@@ -1,0 +1,147 @@
+body{
+    /*background-color: #f3f3f3!important;*/
+}
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+.mod_header {
+    background-color: #fff;
+    position: relative;
+    z-index: 4;
+}
+li{
+    display:inline-block;
+}
+a:focus,
+a:hover{
+/*    color: #31c27c!important;
+*/    text-decoration: none!important;
+}
+/*
+	共用：大小导航栏
+*/
+.navbar-default .navbar-nav>li>a{
+	color: #000!important;
+}
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.btn-login:focus,
+.btn-login:hover{
+    color: #31c27c!important;
+}
+/*
+	模块：大导航栏
+*/
+.navbar{
+	border-color:transparent!important;
+    border-bottom-color: #e7e7e775!important;
+    background-color: transparent!important;
+}
+.navbar-max {
+	max-width: 1200px;
+    margin: 0 auto!important;
+    position: relative;
+}
+.navbar-max .navbar-nav>.active>a,
+.navbar-max .navbar-nav>.active>a:focus, 
+.navbar-max .navbar-nav>.active>a:hover,
+.navbar-nav button:first-child,
+.navbar-nav button:first-child:focus,
+.navbar-nav button:first-child:hover{
+    color: #fff!important;
+    background-color: #31c27c!important;
+}
+.navbar-nav button:first-child{
+	margin-right: 5px;
+}
+/*logo*/
+.navbar-max .navbar-header{
+	width: 16%;
+}
+.navbar-max .navbar-header>a{
+	padding: 21px 30px 0 0;
+}
+/*导航栏字体*/
+.navbar-max .navbar-nav a{
+	font-size: 19px;
+	line-height: 56px!important;
+}
+/*搜索框*/
+.navbar-max form{
+	margin-left: 20px;
+}
+.navbar-max .navbar-form{
+	padding: 17px 5px!important;
+}
+.navbar-max .form-group{
+	position: relative;
+}
+.navbar-max .form-group input{
+	width: 220px;
+}
+.search_input__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    width: 38px;
+    height: 35px;
+    overflow: visible;
+    background: 0 0;
+}
+.icon_search {
+    position: absolute;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    background-position: 0 -40px;
+}
+.icon_search:focus,
+.icon_search:hover {
+	color: #31c27c;
+}
+.icon_txt {
+    font: 0/0 a;
+}
+.btn-login{
+    outline:none;
+    background-color: transparent;
+}
+
+/*
+	模块：首页小导航栏
+*/
+.nav-revise>.active>a,
+.nav-revise>.active>a:focus, 
+.nav-revise>.active>a:hover,
+.nav-revise a:focus, 
+.nav-revise a:hover ,
+.playlist .title a:focus,
+.playlist .title a:hover{
+	color: #31c27c!important;
+    text-decoration: none; 
+	background-color: transparent!important;
+}
+
+.navbar-min {
+	padding-left:22.5%; 
+	border-top:1px solid #f2f2f2;
+}
+.navbar-min li>a{
+	padding: 10px 18px!important;
+}
+.nav-revise {
+    padding: 5px 0;
+    margin: 0;
+    list-style: none;
+    text-align:center;
+    display: block;
+}
+.nav-revise li{
+    padding: 10px 18px!important;
+}
+.nav-revise li a{
+    color: #000!important;
+}

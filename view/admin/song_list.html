@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <!-- 引入头文件 -->
+    <?php require PATH.'/view/admin/top.html'; ?>
+    <body>
+        <div class="x-nav">
+            <span class="layui-breadcrumb">
+              <a><cite>首页</cite></a>
+              <a><cite>歌曲管理</cite></a>
+              <a><cite>歌曲列表</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
+        </div>
+        <div class="x-body">
+            <form class="layui-form x-center" action="" style="width:800px">
+                <div class="layui-form-pane" style="margin-top: 15px;">
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">搜索歌曲:</label>
+                    
+                    
+                    <div class="layui-input-inline">
+                      <input type="text" name="stage_name"  placeholder="请输入歌曲名" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-inline" style="width:80px">
+                        <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                    </div>
+                  </div>
+                </div> 
+            </form>
+            <xblock><button class="layui-btn" onclick="song_add('添加歌曲','./admin_song_add.php','700','600')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：<?php echo $song_num;?> 条</span></xblock>
+            <table class="layui-table">
+                <thead>
+                    <tr>
+                        <th>序号</th><th>歌曲名</th><th>歌手</th>
+                        <th>专辑</th><th>发行时间</th><th>语种</th>
+                        <th>流派</th><th>时长</th><th>评论数</th><th>热度</th>
+                        <th>状态</th><th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="x-img">
+                    <?php $count=1; foreach ($song as $k => $v){ ?>
+                    <tr>
+                        <td>
+                            <?php echo $count;$count++; ?>
+                        </td>
+                        <td>
+                            <u style="cursor:pointer" onclick="song_show('<?php echo $v['song_name']; ?>','./admin_song_show.php?song_id=<?php echo $v['song_id']; ?>','600','600')">
+                                <?php echo $v['song_name']; ?>
+                            </u>
+                        </td>
+                        <td >
+                            <?php echo $v['stage_name']; ?>
+                        </td>
+                        <td >
+                            <?php echo $v['album_name']; ?>
+                        </td>
+                        <td >
+                            <?php echo date('Y-m-d',$v['pub_time']); ?>
+                        </td>
+                        <td >
+                            <?php echo $v['language']; ?>
+                        </td>
+                        <td >
+                            <?php echo $v['style']; ?>
+                        </td>
+                        <td >
+                            <?php echo $v['time']; ?>
+                        </td>
+                        <td >
+                            <?php echo $v['comm_num']; ?>
+                        </td>
+                        <td >
+                            <?php echo $v['z_index']; ?>
+                        </td>
+                        <td>
+                            <?php if($v['status']==1){ ?>
+                            <a href="./admin_song_list.php?song_id=<?php echo $v['song_id']; ?>&status=<?php echo $v['status']; ?>" ><span class="layui-btn layui-btn-normal layui-btn-xs">
+                                可&nbsp;&nbsp;&nbsp;用
+                            </span></a>
+                            <?php }else if($v['status']==2){ ?>
+                            <a href="./admin_song_list.php?song_id=<?php echo $v['song_id']; ?>&status=<?php echo $v['status']; ?>" ><span class="layui-btn layui-btn-danger layui-btn-xs">
+                                不可用
+                            </span></a>
+                            <?php } ?>
+                        </td>
+                        <td class="td-manage">
+                            
+                            <a title="编辑" href="javascript:;" onclick="song_edit('编辑','./admin_song_edit.php?song_id=<?php echo $v['song_id'];?>','800','600')"
+                            class="ml-5" style="text-decoration:none">
+                                <i class="layui-icon">&#xe642;</i>
+                            </a>
+                            <a style="text-decoration:none"  onclick="song_edit('修改音乐','./admin_song_edit2.php?song_id=<?php echo $v['song_id'];?>','500','500')"
+                            href="javascript:;" title="修改音乐">
+                                <i class="layui-icon">&#xe631;</i>
+                            </a>
+                            
+                        </td>
+                    </tr>
+                     <?php } ?>
+                </tbody>
+            </table>
+
+            <div id="page"></div>
+        </div>
+        <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+        <script src="../../js/x-layui.js" charset="utf-8"></script>
+        <script>
+            layui.use(['laydate','element','laypage','layer'], function(){
+                $ = layui.jquery;//jquery
+              //laydate = layui.laydate;//日期插件
+              lement = layui.element();//面包导航
+              //laypage = layui.laypage;//分页
+              layer = layui.layer;//弹出层
+
+              //以上模块根据需要引入
+
+                layer.ready(function(){ //为了layer.ext.js加载完毕再执行
+                  layer.photos({
+                    photos: '#x-img'
+                    //,shift: 5 //0-6的选择，指定弹出图片动画类型，默认随机
+                  });
+                }); 
+              
+            });
+
+            //批量删除提交
+             // function delAll () {
+             //    layer.confirm('确认要删除吗？',function(index){
+             //        //捉到所有被选中的，发异步进行删除
+             //        layer.msg('删除成功', {icon: 1});
+             //    });
+             // }
+             /*添加*/
+            function song_add(title,url,w,h){
+                x_admin_show(title,url,w,h);
+            }
+            /*查看*/
+            function song_show(title,url,w,h){
+                x_admin_show(title,url,w,h);
+            }
+            // 编辑
+            function song_edit (title,url,w,h) {
+                x_admin_show(title,url,w,h); 
+            }
+            /*删除*/
+            // function banner_del(obj,id){
+            //     layer.confirm('确认要删除吗？',function(index){
+            //         //发异步删除数据
+            //         $(obj).parents("tr").remove();
+            //         layer.msg('已删除!',{icon:1,time:1000});
+            //     });
+            // }
+            </script>
+    </body>
+</html>

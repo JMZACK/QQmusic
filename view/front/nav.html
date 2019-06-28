@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default navbar-max" role="navigation">
+        <!--大导航栏-->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./user_index.php">
+            <img src="../../images/font-logo.png" alt="" class="img-responsive" />
+          </a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./user_index.php">音乐馆</a></li>
+            <li><a href="./user_mymusic.php">我的音乐</a></li>
+            <li><a href="#">客户端</a></li>
+            <li><a href="#">音乐号</a></li>
+            <li><a href="#">VIP</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+             <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索音乐、MV、歌单、用户" aria-label="请输入搜索内容">
+                <button class="search_input__btn">
+                  <i class="icon_search glyphicon glyphicon-search"></i>
+                  <span class="icon_txt">搜索</span>
+                </button>
+             </div>
+          </form>   
+
+          <?php if(!isset($_COOKIE['u_id'])){ ?>
+            <div class="navbar-form" style="float: left;">
+              <a href="./user_login.php"><button type="submit" class="btn btn-login">登录</button></a>
+            </div>
+          <?php }else{ ?>
+            <div class="navbar-form" style="float: left;">
+              <a href=""><button type="submit" class="btn btn-login"><?php echo $_COOKIE['u_name'];?></button></a>
+            </div>
+          <?php } ?>
+          <div class="navbar-form navbar-nav">
+            <button type="submit" class="btn btn-default">开通绿钻豪华版</button>
+            <button type="submit" class="btn btn-default">开通付费包</button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </nav>

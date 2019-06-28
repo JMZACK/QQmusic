@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html> 
+    <?php require PATH.'/view/admin/top.html'; ?>
+    <body>
+        <div class="x-body">
+            <blockquote class="layui-elem-quote">
+              <dl style="margin-left:20px; color:#019688">
+                <?php if($sign == 'succ'){ ?>
+                <dt><span style="margin-left:0;font-size: 16px;font-weight:bold;"><?php echo $str; ?></span>
+                <?php } ?>
+                <?php if($sign == 'error'){ ?>
+                <dt><span style="margin-left:0;font-size: 16px;font-weight:bold;color: red;"><?php echo $str; ?></span>
+                <?php } ?>
+              </dl>
+            </blockquote>
+            
+        </div>      
+    </body>
+
+</html>

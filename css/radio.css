@@ -1,0 +1,120 @@
+.radio_list__title_txt a:focus,
+.radio_list__title_txt a:hover,
+.radio_sidebar__item:hover,
+.radio_sidebar__item:focus{
+	color: #31c27c;
+}
+body{
+    background: url("../images/bg_detail.jpg") 50% 0 repeat-x;	
+}
+.main {
+    padding: 35px 0 0;
+}
+
+.mod_radio_sidebar {
+    position: absolute;
+    background: url("../images/radio_sidebar.png") 0 0 no-repeat;
+}
+.radio_sidebar__item--current {
+    color: #31c27c!important;
+}
+
+.radio_sidebar__item {
+    position: relative;
+    display: block;
+    color: black;
+    padding-left: 63px;
+    line-height: 59px;
+    font-size: 15px;
+}
+.radio_sidebar__item--current:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 37px;
+    overflow: hidden;
+    left: 0;
+    top: 50%;
+    background-color: #31c27c;
+}
+
+.mod_radio {
+    margin-left: 245px;
+    margin-top: 20px;
+}
+.radio__tit {
+    position: relative;
+    font-weight: 400;
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    margin-bottom: 38px;
+    font-size: 15px;
+}
+.radio__tit:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    overflow: hidden;
+    left: 43px;
+    right: 0;
+    top: 10px;
+    background-color: #ececec;
+}
+
+.mod_radio_list {
+    overflow: hidden;
+}
+.mod_radio_list .radio_list__list {
+    margin-right: -20px;
+}
+.mod_radio_list .radio_list__item {
+    width: 25%;
+}
+.mod_radio_list .radio_list__item {
+    float: left;
+    padding-bottom: 44px;
+    overflow: hidden;
+}
+.mod_radio_list .radio_list__item_box {
+    position: relative;
+    margin-right: 20px;
+}
+.mod_radio_list .radio_list__cover {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 100%;
+    margin-bottom: 15px;
+}
+.mod_cover {
+    zoom: 1;
+}
+.radio_list__cover a{ 
+	color: black;
+}
+
+.mod_radio_list .radio_list__pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: scale(1) translateZ(0);
+    -webkit-transition: -webkit-transform .75s;
+    transform: scale(1) translateZ(0);
+    transition: transform .75s;
+}
+
+.mod_radio_list .radio_list__title {
+    overflow: hidden;
+}
+.mod_radio_list .radio_list__other {
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
+}
+.radio_list__title_txt a{
+ 	color: black;
+ }

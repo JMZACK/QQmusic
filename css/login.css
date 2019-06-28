@@ -1,0 +1,273 @@
+.popup_login {
+    width: 560px;
+    height: 410px;
+    overflow: hidden;
+}
+
+.mod_popup {
+    position: absolute;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    z-index: 999;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+.popup__hd {
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+.popup__tit {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.popup__tit_item.current ,
+.popup__tit_item:hover,
+.popup__tit_item:focus{
+    color: #31c27c;
+    text-decoration: none;
+}
+.popup__tit_item {
+    color: black;
+    text-decoration: none;
+    margin: 0 55px;
+}
+.popup__close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.popup_login .popup__bd {
+    overflow: hidden;
+}
+
+.popup_login .popup_login_qq {
+    margin-top: -25px;
+}
+.popup_login iframe {
+    width: 564px;
+    margin-left: -2px;
+}
+
+
+/*主体内容*/
+.login, .login_no_qlogin {
+    background-color: #ffffff;
+}
+
+.login, .login_no_qlogin {
+    margin: 0 auto;
+    border: 2px solid #eee;
+    position: relative;
+    height: 100%;
+}
+.header {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "微软雅黑";
+    z-index: 1000;
+}
+.error_tips {
+    width: 258px;
+    left: 50%;
+    margin-left: -129px;
+    top: 50%;
+}
+.error_tips, .loading_tips {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+}
+.error_tips .error_logo {
+    position: absolute;
+    left: 3px;
+    height: 18px;
+    line-height: 18px;
+    width: 18px;
+    background: url(//imgcache.qq.com/ptlogin/v4/style/40/images/icon_3_tiny.png) 0 -162px no-repeat;
+    _background: url(//imgcache.qq.com/ptlogin/v4/style/40/images/icon_3_8.png) 0 -162px no-repeat;
+}
+.error_tips .err_m {
+    display: inline-block;
+    padding-left: 24px;
+    line-height: 18px;
+    color: #ff3b30;
+    vertical-align: middle;
+    text-align: left;
+}
+.loading_tips {
+    text-align: center;
+    height: 24px;
+    top: 10px;
+    left: 50%;
+    margin-left: -28px;
+}
+.error_tips, .loading_tips {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+}
+
+
+.web_qr_login {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.web_qr_login .web_qr_login_show {
+    top: 0;
+    height: 100%;
+}
+
+.web_login {
+    position: relative;
+    height: 100%;
+    top: 50%;
+    margin-top: -165px;
+}
+.web_login .tips {
+    position: relative;
+    margin: 0 auto 25px;
+    z-index: 11;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+.title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.web_login .operate_tips {
+    display: none;
+    padding: 8px;
+    border: 1px solid #dad699;
+    background: #f9f5c7;
+    position: absolute;
+    bottom: -3px;
+    border-radius: 2px;
+}
+.web_login .operate_tips .operate_content {
+    width: 100%;
+    text-align: left;
+}
+.web_login .operate_tips .down_row {
+    position: absolute;
+    bottom: -6px;
+    _bottom: -7px;
+    left: 20px;
+    width: 12px;
+    height: 6px;
+    font-size: 1px;
+}
+
+.web_login .login_form {
+    width: 272px;
+    margin: 0 auto;
+}
+.web_login .Area {
+    height: 55px;
+    position: relative;
+    z-index: 10;
+}
+.web_login .input_tips, .web_login .input_tips_focus {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #aaa;
+    cursor: text;
+}
+.web_login .inputOuter {
+    width: 272px;
+    height: 42px;
+}
+.web_login .inputstyle {
+        width: 100%;
+    border-radius: 4px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 42px;
+    padding: 10px 0 10px 10px;
+    line-height: 18px;
+    background: 0 0;
+    color: #333;
+    font-family: Verdana,Tahoma,Arial;
+    font-size: 16px;
+    border:1px solid #aaaab2;
+}
+
+
+.web_login .submit {
+    width: 100%;
+    border-radius: 4px;
+    position: relative;
+    height: 40px;
+    background-color: #86ce2f;
+}
+.web_login .login_button {
+    position: absolute;
+    left: 0;
+    outline: 0;
+    width: 100%;
+}
+.web_login .login_button .btn {
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Microsoft Yahei","微软雅黑",SimHei,"黑体","Hiragino Sans GB",STHeiTi,sans-serif;
+    color: #fff;
+    background: 0 0;
+    cursor: pointer;
+}
+
+.bottom {
+    height: 16px;
+    margin-bottom: 28px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    font-size: 12px;
+}
+.bottom .low_login {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+.bottom .low_login .checked, .bottom .low_login .uncheck {
+    float: left;
+    height: 18px;
+    width: 18px;
+}
+.bottom .low_login .low_login_wording {
+    height: 16px;
+    line-height: 16px;
+    line-height: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.bottom .link {
+    color: #666;
+}
+.bottom .dotted {
+    color: #bfbfbf;
+    margin: 0 5px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <?php require PATH.'/view/admin/top.html'; ?>
+    
+    <body>
+        <div class="x-body">
+            <form class="layui-form" action="./admin_song_edit2.php" method="POST" enctype=multipart/form-data >
+                <input type="hidden" name="song_id" value="<?php echo $song_id; ?>">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">
+                        <span class="x-red">*</span>歌曲名：
+                    </label>
+                    <div class="layui-input-inline">
+                        <p><?php echo $song_name; ?></p>
+                    </div>
+                </div>
+                
+                
+                <div class="layui-form-item">
+                    <label for="song_loca" class="layui-form-label">
+                        <span class="x-red">*</span>上传歌曲：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="file" name="song_loca" />
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="pub_time" class="layui-form-label">
+                            <span class="x-red">*</span>发行时间：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="pub_time" class="layui-input" autocomplete="off">
+                            时间格式：2019-04-01
+                        </div>
+
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="time" class="layui-form-label">
+                            <span class="x-red">*</span>歌曲时长：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="time" class="layui-input" 
+                            autocomplete="off">
+                            时间格式：03：33
+                        </div>
+
+                    </div>
+                </div>
+                
+                              
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label">
+                    </label>
+                    <button  class="layui-btn" lay-filter="add" lay-submit >
+                        修改歌曲文件
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+        <script src="../../js/x-layui.js" charset="utf-8"></script>
+        <script>
+            layui.use(['form','layer'], function(){
+                $ = layui.jquery;
+              var form = layui.form()
+              ,layer = layui.layer;
+            });
+        </script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    
+    <?php require PATH.'/view/admin/top.html'; ?>
+    
+    <body style="background-color: #393D49">
+        <div class="x-box">
+            <div class="x-top">
+                <ul class="x-login-left" style="margin-left: 20px;margin-top: 20px;">
+                    <p>QQ音乐用户登陆</p>
+                    
+                </ul>
+            </div>
+            <div class="x-mid">
+                <div class="x-avtar">
+                    <img src="../../images/logo.png" />
+                </div>
+                <div class="input">
+                    <form class="layui-form" action="./user_login.php" method="POST">
+                        <div class="layui-form-item x-login-box">
+                            <label for="username" class="layui-form-label">
+                                <i class="layui-icon">&#xe612;</i>
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" autocomplete="off" 
+                                  placeholder="username" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item x-login-box">
+                            <label for="pass" class="layui-form-label">
+                                <i class="layui-icon">&#xe628;</i>
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="pwd"
+                                autocomplete="off" placeholder="" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" id="loginbtn">
+                            <button  class="layui-btn" lay-filter="save" lay-submit="">
+                                登 录
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p style="color:#fff;text-align: center;">Copyright © 2019.Company 格协 All rights</p>
+        <script src="../../lib/layui/layui.js" charset="utf-8">
+        </script>
+        <script>
+            // layui.use(['form'],
+            // function() {
+            //     $ = layui.jquery;
+            //     var form = layui.form(),
+            //     layer = layui.layer;
+
+            //     $('.x-login-right li').click(function(event) {
+            //         color = $(this).attr('color');
+            //         $('body').css('background-color', color);
+            //     });
+
+                //监听提交
+            //     form.on('submit(save)',
+            //     function(data) {
+            //         console.log(data);
+            //         layer.alert(JSON.stringify(data.field), {
+            //           title: '最终的提交信息'
+            //         },function  () {
+            //             location.href = "./index.html";
+            //         })
+            //         return false;
+            //     });
+
+            // });
+
+        </script>
+    </body>
+
+</html>

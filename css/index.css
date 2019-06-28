@@ -1,0 +1,175 @@
+.img img{
+    width: 100%;
+    height: 100%;
+}
+/*
+	主体部分
+*/
+.mod_index{
+    background: url("../images/bg_detail.jpg") 50% 0 repeat-x;
+}
+.mod_index .header{
+    padding: 18px 0 5px 0;
+}
+.mod_index .header h2{
+	font-weight: bold;
+    margin-bottom: 0;
+}
+.mod_index .nav-revise{
+	margin: 10px 0;
+}
+
+.mod_index .hd button{
+    margin: 8px 0 0 92px;
+    position: absolute;
+}
+.mod_index .hd button span{
+    margin-right: 5px;
+}
+/*播放列表*/
+.mod_index_list{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.playlist ul{
+    padding: 0;
+}
+.playlist li{
+	margin-left: 15px;
+}
+.playlist li .img{
+	width: 221px;
+	height: 221px;
+	overflow: hidden;
+    position: relative;
+}
+.playlist li .img .img-item{
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.playlist li .img .img-item:hover{
+	transform: scale(1.1);
+}
+.playlist li .img .play-ico{
+    z-index: 222;
+    display: none;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+}
+
+.playlist li .title{
+	margin: 13px 0 3px 0;
+}
+.playlist li .title a{
+	float: left;
+    max-width: 100%;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 22px;
+    max-height: 44px;
+    color: black;
+}
+
+.playlist li .num{
+	color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
+}
+
+/*歌曲列表*/
+.songlist {
+    margin-top: 20px;
+}
+.songlist .list{
+    margin-left: 15px;
+    overflow: hidden;
+    height: 360px;
+}
+.songlist .item{
+    width: 360px;
+    margin-right: 30px;
+    float: left;
+    height: 115px;
+    border-bottom: 1px solid #dadada9e;
+    padding: 12.5px 0;
+}
+.songlist .img{
+    width: 86px;
+    height: 86px;
+    overflow: hidden;
+    float: left;
+}
+
+.songlist .count{
+    width: 210px;
+    float: left;
+    padding: 22px 0 0 17px;
+    /*background-color: saddlebrown;*/
+}
+.songlist .count .name{
+    width: 200px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.songlist .count .name a{
+    color: black;
+}
+.songlist .count .auto a{
+    color: #999;
+}
+.songlist .count .name a:hover,
+.songlist .count .name a:focus,
+.songlist .count .auto a:hover,
+.songlist .count .auto a:focus,
+.dielist a:hover,
+.dielist a:focus{
+    color: #31c27c!important;
+    text-decoration: none;
+}
+.songlist .time{
+    float: right;
+    padding: 40px 0;
+    color: #999;
+}
+
+.addlist{
+    margin-top: 20px;
+}
+.addlist .img{
+    float: left;
+    width: 50%;
+    height: 250px;
+    padding: 15px 7.5px 15px 15px;
+}
+
+.dielist .item{
+    width: 19.15%;
+    float: left;
+    margin-left: 10px;
+}
+.dielist .img{
+    width: 218px;
+    height: 218px;
+    margin-bottom: 15px;
+}
+
+.dielist .name a{
+    color: black ;
+}
+.dielist .auto {
+    margin: 2px 0 25px 0;
+}
+.dielist .auto ,
+.dielist .auto a{
+    color: #999;
+}
+
+
+

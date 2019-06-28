@@ -1,0 +1,39 @@
+.navbar{
+	border:none!important;
+}
+.mod_unlogin {
+    height: 622px;
+    background: url("../images/bg_unlogin.jpg") 50% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.mod_unlogin .title{
+    font-size: 55px;
+    width: 722px;
+    margin-top: 208px!important;
+}
+.mod_unlogin .title,
+.mod_unlogin .desc,
+.mod_unlogin a{
+	margin: 0 auto;
+    color: white;
+    font-family: fantasy;
+}
+.mod_unlogin .desc{
+    width: 335px;
+    font-size: 23px;
+    margin-top: 30px;
+}
+.mod_unlogin a{
+	display: block;
+    width: 111px;
+    background-color: #31c27c;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-top: 40px;
+}
+.mod_unlogin a:hover,
+.mod_unlogin a:focus{
+	color: white;
+}

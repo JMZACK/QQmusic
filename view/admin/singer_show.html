@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+    <?php require PATH.'/view/admin/top.html'; ?>
+    <body>
+        <div class="x-body">
+            <blockquote class="layui-elem-quote">
+                <img src="<?php echo '../..'.$avatar; ?>" style="width:200px; margin-left: 50px;">
+                <dl style="margin-left:20px; color:#019688">
+                <dt><span style="margin-left:0;font-size: 16px;font-weight:bold;">艺名：<?php echo $stage_name; ?></span>
+                <dt><span style="margin-left:0;font-size: 16px;font-weight:bold;">性别：<?php echo $sex; ?></span>
+                <dd style="margin-left:0;font-size: 16px;font-weight:bold;" >简介：</dd>
+                <dd style="margin-left:0; margin-top:7px;">
+                  <?php foreach ($intro as $k => $v){ echo $v.'<br/>'; } ?>
+                </dd>
+              </dl>
+            </blockquote>
+            
+        </div>
+        <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+        <script src="../../js/x-layui.js" charset="utf-8"></script>            
+    </body>
+
+</html>

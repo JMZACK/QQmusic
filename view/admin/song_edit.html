@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <?php require PATH.'/view/admin/top.html'; ?>
+    
+    <body>
+        <div class="x-body">
+            <form class="layui-form" action="./admin_song_edit.php" method="POST" enctype=multipart/form-data >
+                <?php foreach($song as $k => $v){ ?>
+                <input type="hidden" name="song_id" value="<?php echo $v['song_id']; ?>" >
+                <div class="layui-form-item">
+                    <label for="song_name" class="layui-form-label">
+                        <span class="x-red">*</span>歌曲名：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="song_name" class="layui-input" 
+                        value="<?php echo $v['song_name']?>" autocomplete="off">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="avatar" class="layui-form-label">
+                        <span class="x-red">*</span>封面图片：
+                    </label>
+                    <div class="layui-input-inline">
+                        <img src="<?php echo '../..'.$v['avatar']; ?>" height="170" width="175"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="avatar" class="layui-form-label">
+                        <span class="x-red">*</span>上传封面：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="file" name="avatar" />
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="album_name" class="layui-form-label">
+                        <span class="x-red">*</span>收藏专辑：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="album_name" class="layui-input" 
+                        value="<?php echo $v['album_name'];?>" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="pub_time" class="layui-form-label">
+                            <span class="x-red">*</span>发行时间：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="pub_time" class="layui-input" 
+                            value="<?php echo date('Y-m-d',$v['pub_time']);?>" autocomplete="off">
+                            时间格式：2019-04-01
+                        </div>
+
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="style" class="layui-form-label">
+                            <span class="x-red">*</span>歌曲流派：
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="style">
+                                <option value="<?php echo $v['style']; ?>" selected><?php echo $v['style']; ?></option>
+                                <?php foreach($arrStyle as $key => $value ){ ?>
+                                <?php if($key == $signStyle){continue;}else{ ?>
+                                    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                                <?php }} ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="language" class="layui-form-label">
+                            <span class="x-red">*</span>专辑语种：
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="language">
+                                <option value="<?php echo $v['language']; ?>" selected><?php echo $v['language']; ?></option>
+                                <?php foreach($arrLanguage as $key => $value ){ ?>
+                                <?php if($key == $signLanguage){continue;}else{ ?>
+                                    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                                <?php }} ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="z_index" class="layui-form-label">
+                            <span class="x-red">*</span>专辑热度：
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="z_index">
+                                <option value="<?php echo $v['z_index']; ?>" selected><?php echo $v['z_index']; ?></option>
+                                <?php foreach($arrZIndex as $key => $value ){ ?>
+                                <?php if($value == $zindex){continue;}else{ ?>
+                                    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                                <?php }} ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layui-form-item layui-form-text">
+                    <label for="lyric" class="layui-form-label">
+                        <span class="x-red">*</span>歌词：
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="随便写些什么刷下存在感" id="lyric" name="lyric" autocomplete="off"
+                        class="layui-textarea" style="height: 130px;"><?php echo $v['lyric'];?></textarea>
+                    </div>
+                </div>
+                
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label">
+                    </label>
+                    <button  class="layui-btn" lay-filter="add" lay-submit >
+                        修改
+                    </button>
+                </div>
+                <?php }?>
+            </form>
+        </div>
+        <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+        <script src="../../js/x-layui.js" charset="utf-8"></script>
+        <script>
+            layui.use(['form','layer'], function(){
+                $ = layui.jquery;
+              var form = layui.form()
+              ,layer = layui.layer;
+            });
+        </script>
+        
+    </body>
+
+</html>

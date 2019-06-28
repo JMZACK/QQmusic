@@ -1,0 +1,253 @@
+a:focus,
+a:hover{
+	color: #31c27c!important;
+    text-decoration: none!important;
+}
+h1{
+	font-size:31px!important;
+}
+body{
+    background: url("../images/bg_detail.jpg") 50% 0 repeat-x;	
+}
+/*
+	主体部分
+*/
+
+.mod_index .img{
+	width: 250px;
+	height: 250px;
+	margin-right: 50px;
+	float: left;
+    position: relative;
+}
+/*如果是歌单，则.mod_index .img 的margin-right: 80px;*/
+/*以下用于歌单时*/
+/*.mod_index .img:after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 303px;
+    height: 243px;
+    background: url(../images/player/album_cover_player1.png) 0 0 no-repeat;
+    pointer-events: none;
+}*/
+.mod_index .img img{
+	width: 100%;
+	height: 100%;
+}
+
+.mod_index .item{
+	float: left;
+}
+.mod_index .item p{
+	margin-bottom: 10px;
+}
+.mod_index .item .auto span{
+	color: #999;
+	margin-right: 5px;
+}
+.mod_index .item .auto a{
+    color: #333;
+    font-size: 18px;
+}
+.mod_index .item a{
+	margin-right: 5px;
+	color: black;
+}
+
+/*按钮组*/
+.mod_index .item button{
+	width: 110px;
+	padding: 10px;
+}
+.mod_index .item button:focus,
+.mod_index .item button:hover{
+	border-color: #adadad!important;
+}
+.mod_index .item button span{
+    margin-right: 5px;
+    color: #969494;
+}
+.mod_index .item .btn-play{
+	background-color: #31c27c!important;
+	color: white;
+}
+.mod_index .item .btn-play span{
+	color: white;
+}
+/*下拉菜单*/
+.mod_index .item .btn-group ul{
+    padding: 0;
+    margin-left: 105px;
+}
+.mod_index .item .btn-group li{
+	width: 100%;
+}
+.mod_index .item .btn-group a{
+    width: 100%;
+    padding: 10px 20px;
+}
+.mod_index .item .btn-group a:hover,
+.mod_index .item .btn-group a:focus{
+	color: #fff!important;
+    background-color: #31c27c;
+}
+.mod_index .item .btn-group span{
+	margin-right: 5px;
+}
+
+
+.mod_song{
+	margin-top: 40px;
+}
+/*歌单表格*/
+.mod_song table{
+	width: 70%!important;
+	float: left;
+	margin-right: 50px;
+}
+.mod_song th{
+	color: #999!important;
+}
+.mod_song th,
+.mod_song td{
+	border: 0!important;
+}
+.mod_song td a{
+	color: black;
+}
+.mod_song a:focus,
+.mod_song a:hover{
+	color: #31c27c!important;
+	text-decoration: none;
+}
+
+.mod_song .tab_auto{
+
+}
+.mod_song .tab_type{
+    width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}	
+.mod_song .tab_num,
+.mod_song .tab_name span,
+.mod_song .tab_time{
+	width: 50px;
+	color: #999;
+}
+.mod_song .tab_name{
+	width: 50%;
+}
+.mod_song .tab_name span{
+	margin-left: 7px;
+}
+/*简介*/
+.mod_song .summary{
+	float: left;
+}
+.mod_song .summary h3{
+	line-height: 46px;
+	font-weight: 400;
+	font-size: 20px;
+	margin:0!important;
+}
+.mod_song .summary .about_font{
+	max-height: 88px;
+	width: 280px;
+	overflow: hidden;
+}
+
+
+.mod_leave{
+	width: 70%!important;
+}
+/*写评论*/
+.mod_leave .leaving .title span{
+	font-size: 14px;
+	margin-left: 12px;
+	color: #999;
+}
+.mod_leave .leaving .textbox{
+	width: 100%;
+	overflow: hidden;
+}
+.mod_leave .leaving textarea{
+    width: 100%;
+    outline:none;
+    padding: 10px;
+    height: 100px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    margin: 10px 0 10px 0;
+}
+.mod_leave .leaving .but_groud{
+	float: right;
+}
+.mod_leave .leaving .ico{
+
+}
+.mod_leave .leaving button{
+	background-color: #31c27c!important;
+	color: white;
+}
+
+/*评论区*/
+.mod_leave .leave{
+
+}
+.mod_leave .leave .title{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.mod_leave .leave .items{
+    padding: 15px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.mod_leave .leave .img{
+	margin: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+.mod_leave .leave img{
+    width: 100%;
+    height: 100%;	
+}
+.mod_leave .leave .font{
+    margin-top: 10px;
+}
+.mod_leave .leave .ico span{
+	cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    margin-left: 20px;
+    font-weight: 400;
+}
+.mod_leave .leave .ico span:hover,
+.mod_leave .leave .ico span:focus{
+	color: #31c27c!important;
+}
+.mod_leave .leave .name a,
+.mod_leave .leave .time{
+	color: #999;
+}
+
+.mod_leave .leave .last{
+	width: 150px;
+	margin: 10px auto;
+	color: #999;
+}
+
+
+
+
+
+

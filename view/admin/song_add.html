@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <?php require PATH.'/view/admin/top.html'; ?>
+    
+    <body>
+        <div class="x-body">
+            <form class="layui-form" action="./admin_song_add.php" method="POST" enctype=multipart/form-data >
+                <div class="layui-form-item">
+                    <label for="song_name" class="layui-form-label">
+                        <span class="x-red">*</span>歌曲名：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="song_name" class="layui-input" autocomplete="off">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="avatar" class="layui-form-label">
+                        <span class="x-red">*</span>上传封面：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="file" name="avatar" />
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="album_name" class="layui-form-label">
+                        <span class="x-red">*</span>专辑名称：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="album_name" class="layui-input" autocomplete="off"/>
+                    </div>
+                </div>
+                <!-- <div class="layui-form-item">
+                    <label for="quailty" class="layui-form-label">
+                        <span class="x-red">*</span>音质：
+                    </label>
+                    <div class="layui-input-inline">
+                            <select name="quailty">
+                                <option>
+                                </option>
+                                    <option value="流畅">流畅</option>
+                                    <option value="标准">标准</option>
+                                    <option value="高品">高品</option>
+                                    <option value="无损">无损</option>
+                            </select>
+                    </div>
+                </div> -->
+                <!-- <div class="layui-form-item">
+                    <label for="song_position" class="layui-form-label">
+                        <span class="x-red">*</span>上传歌曲：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="file" name="song_position" />
+                    </div>
+                </div> -->
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="pub_time" class="layui-form-label">
+                            <span class="x-red">*</span>发行时间：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="pub_time" class="layui-input" autocomplete="off">
+                            时间格式：2019-04-01
+                        </div>
+
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="style" class="layui-form-label">
+                            <span class="x-red">*</span>歌曲流派
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="style">
+                                <option>
+                                </option>
+                                    <option value="流行">流行</option>
+                                    <option value="嘻哈">嘻哈</option>
+                                    <option value="摇滚">摇滚</option>
+                                    <option value="电子">电子</option>
+                                    <option value="民谣">民谣</option>
+                                    <option value="R&B">R&B</option>
+                                    <option value="民歌">民歌</option>
+                                    <option value="轻音乐">轻音乐</option>
+                                    <option value="爵士">爵士</option>
+                                    <option value="古典">古典</option>
+                                    <option value="乡村">乡村</option>
+                                    <option value="蓝调">蓝调</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="language" class="layui-form-label">
+                            <span class="x-red">*</span>歌曲语种
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="language">
+                                <option>
+                                </option>
+                                    <option value="国语">国语</option>
+                                    <option value="英语">英语</option>
+                                    <option value="韩语">韩语</option>
+                                    <option value="日语">日语</option>
+                                    <option value="纯音乐">纯音乐</option>
+                                    <option value="其它">其它</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label for="z_index" class="layui-form-label">
+                            <span class="x-red">*</span>歌曲热度
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="z_index">
+                                <option>
+                                </option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layui-form-item layui-form-text">
+                    <label for="lyric" class="layui-form-label">
+                        <span class="x-red">*</span>歌词
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="歌词歌词歌词歌词歌词歌词歌词歌词..." id="lyric" name="lyric" autocomplete="off"
+                        class="layui-textarea" style="height: 130px;"></textarea>
+                    </div>
+                </div>
+                
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label">
+                    </label>
+                    <button  class="layui-btn" lay-filter="add" lay-submit >
+                        增加
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+        <script src="../../js/x-layui.js" charset="utf-8"></script>
+        <script>
+            layui.use(['form','layer'], function(){
+                $ = layui.jquery;
+              var form = layui.form()
+              ,layer = layui.layer;
+            });
+        </script>
+        
+    </body>
+
+</html>

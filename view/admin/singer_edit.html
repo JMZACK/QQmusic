@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <?php require PATH.'/view/admin/top.html'; ?>
+    
+    <body>
+        <div class="x-body">
+            <img src="<?php echo '../..'.$singer[0]['avatar']; ?>" class="layui-circle" style="width:200px; margin-left: 50px;">
+        <br/><hr/>
+
+            <form class="layui-form" action="./admin_singer_edit.php" method="post" enctype=multipart/form-data >
+
+                <?php  foreach ($singer as $k => $v){ ?>
+                <!-- id隐藏字段 -->
+                <input type="hidden" name="id" value="<?php echo $v['singer_id']; ?>" />
+                <!-- 艺名 -->
+                <div class="layui-form-item">
+                    <label for="stage_name" class="layui-form-label">
+                        <span class="x-red">*</span>艺名：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="stage_name" 
+                        autocomplete="off" value="<?php echo $v['stage_name']; ?>" class="layui-input">
+                    </div>
+                </div>
+                <!-- 字母索引 -->
+                <div class="layui-form-item">
+                    <label for="z_index" class="layui-form-label">
+                        <span class="x-red">*</span>字母索引:
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="z_index" 
+                        autocomplete="off" value="<?php echo $v['letter']; ?>" class="layui-input">
+                    </div>
+                </div>
+                <!-- 性别 -->
+                <div class="layui-form-item">
+                    <label for="sex" class="layui-form-label">
+                        <span class="x-red">*</span>性别
+                    </label>
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <?php if($v['sex'] == '男'){ ?>
+                                <input type="radio" name="sex" value="男" checked title="男">
+                                <input type="radio" name="sex" value="女" title="女">
+                            <?php }else{ ?>
+                                <input type="radio" name="sex" value="男" title="男">
+                                <input type="radio" name="sex" value="女" checked title="女">
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- 地区 -->
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>地区
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="area">
+                                <option value="<?php echo $v['area']; ?>" selected><?php echo $v['area']; ?></option>
+                                <?php foreach($arrArea as $key => $value ){ ?>
+                                <?php if($key == $signArea){continue;}else{ ?>
+                                    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                                <?php }} ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- 流派 -->
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>流派
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="style">
+                                <option value="<?php echo $v['style']; ?>" selected><?php echo $v['style']; ?></option>
+                                <?php foreach($arrStyle as $key => $value ){ ?>
+                                <?php if($key == $signStyle || $key == 0){continue;}else{ ?>
+                                    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                                <?php }} ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- 单曲数 -->
+                <div class="layui-form-item">
+                    <label for="song_num" class="layui-form-label">
+                        <span class="x-red">*</span>单曲数:
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="song_num" 
+                        autocomplete="off" value="<?php echo $v['song_num']; ?>" class="layui-input">
+                    </div>
+                </div>
+                <!-- 专辑数 -->
+                <div class="layui-form-item">
+                    <label for="album_num" class="layui-form-label">
+                        <span class="x-red">*</span>专辑数:
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="album_num" 
+                        autocomplete="off" value="<?php echo $v['album_num']; ?>" class="layui-input">
+                    </div>
+                </div>
+                <!-- MV数 -->
+                <div class="layui-form-item">
+                    <label for="MV_num" class="layui-form-label">
+                        <span class="x-red">*</span>MV 数:
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="MV_num" 
+                        autocomplete="off" value="<?php echo $v['MV_num']; ?>" class="layui-input">
+                    </div>
+                </div>
+                <!-- 热度 -->
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>热度:
+                        </label>
+                        <div class="layui-input-block">
+                            <select name="z_index">
+                                <option value="<?php echo $v['z_index']; ?>" selected><?php echo $v['z_index']; ?></option>
+                                <?php foreach($arrZIndex as $key => $value ){ ?>
+                                <?php if($key == $zindex){continue;}else{ ?>
+                                    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                                <?php }} ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- 头像 -->
+                <div class="layui-form-item">
+                    <label for="avatar" class="layui-form-label">
+                        <span class="x-red">*</span>上传头像：
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="file" name="avatar" />
+                    </div>
+                </div>
+                <!-- 介绍 -->
+                <div class="layui-form-item layui-form-text">
+                    <label for="intro" class="layui-form-label">
+                        <span class="x-red">*</span>介绍：
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="头像的网络地址" name="intro" autocomplete="off"
+                        class="layui-textarea" style="min-height: 180px;"><?php echo $v['intro'];?></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label for="L_sign" class="layui-form-label">
+                    </label>
+                    <button class="layui-btn" key="set-mine" lay-filter="save" lay-submit>
+                        保存
+                    </button>
+                </div>
+                <?php } ?>
+            </form>
+
+        </div>
+        <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+        <script src="../../js/x-layui.js" charset="utf-8"></script>
+        <script>
+            layui.use(['form','layer'], function(){
+                $ = layui.jquery;
+              var form = layui.form()
+              ,layer = layui.layer;
+            
+              //自定义验证规则
+              // form.verify({
+              //   nikename: function(value){
+              //     if(value.length < 5){
+              //       return '昵称至少得5个字符啊';
+              //     }
+              //   }
+              //   ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+              //   ,repass: function(value){
+              //       if($('#L_pass').val()!=$('#L_repass').val()){
+              //           return '两次密码不一致';
+              //       }
+              //   }
+              // });
+              //监听提交
+              // form.on('submit(save)', function(data){
+              //   console.log(data);
+              //   //发异步，把数据提交给php
+              //   layer.alert("增加成功", {icon: 6},function () {
+              //       // 获得frame索引
+              //       var index = parent.layer.getFrameIndex(window.name);
+              //       //关闭当前frame
+              //       parent.layer.close(index);
+              //   });
+              //   return false;
+              // });
+              
+              
+            });
+        </script>
+        
+    </body>
+
+</html>
